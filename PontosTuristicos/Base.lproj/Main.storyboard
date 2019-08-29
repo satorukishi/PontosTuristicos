@@ -1,24 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GfC-ue-Pzh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Pontos Turísticos de SP-->
+        <scene sceneID="niD-K8-BGN">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="ol8-dd-ef0" customClass="AtractionTablewViewController" customModule="PontosTuristicos" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8bC-O4-alQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="attractionCell" textLabel="VJg-Ha-aST" detailTextLabel="pNP-We-gAV" style="IBUITableViewCellStyleSubtitle" id="LtX-0w-SQ2" customClass="AttractionTableViewCell" customModule="PontosTuristicos" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LtX-0w-SQ2" id="DXr-rh-ChS">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Catedral da Sé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VJg-Ha-aST">
+                                            <rect key="frame" x="16" y="5" width="112.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Praça da Sé, Centro - São Paulo - SP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pNP-We-gAV">
+                                            <rect key="frame" x="16" y="25.5" width="209" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lbAddress" destination="pNP-We-gAV" id="Nx7-dS-0QD"/>
+                                    <outlet property="lbTitulo" destination="VJg-Ha-aST" id="0xC-eF-O14"/>
+                                    <segue destination="6bv-jq-x0o" kind="show" id="7Yk-gz-pZJ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ol8-dd-ef0" id="QhW-Lg-584"/>
+                            <outlet property="delegate" destination="ol8-dd-ef0" id="eBL-a6-Vn8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Pontos Turísticos de SP" id="luw-su-W5j"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IDT-2k-Vvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1091" y="148"/>
+        </scene>
+        <!--Detalhe Ponto Turístico-->
+        <scene sceneID="UW1-LC-nE6">
+            <objects>
+                <viewController id="6bv-jq-x0o" customClass="AttractionMapViewController" customModule="PontosTuristicos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0kc-5n-xzH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bXz-GM-MJt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="DOr-5c-hRZ"/>
+                                    <constraint firstAttribute="height" constant="603" id="au8-n0-STI"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GXh-tP-voZ" firstAttribute="trailing" secondItem="bXz-GM-MJt" secondAttribute="trailing" id="Hxs-Lk-Xhl"/>
+                            <constraint firstItem="GXh-tP-voZ" firstAttribute="bottom" secondItem="bXz-GM-MJt" secondAttribute="bottom" id="Kfv-RE-AJy"/>
+                            <constraint firstItem="bXz-GM-MJt" firstAttribute="trailing" secondItem="GXh-tP-voZ" secondAttribute="trailing" id="NSc-r1-nB1"/>
+                            <constraint firstItem="bXz-GM-MJt" firstAttribute="top" secondItem="GXh-tP-voZ" secondAttribute="top" id="SdY-OF-6Oc"/>
+                            <constraint firstItem="bXz-GM-MJt" firstAttribute="leading" secondItem="GXh-tP-voZ" secondAttribute="leading" id="dZ3-IH-wg3"/>
+                            <constraint firstItem="bXz-GM-MJt" firstAttribute="bottom" secondItem="GXh-tP-voZ" secondAttribute="bottom" id="kJF-9m-UGT"/>
+                            <constraint firstItem="bXz-GM-MJt" firstAttribute="top" secondItem="GXh-tP-voZ" secondAttribute="top" id="sHK-Fb-xWw"/>
+                            <constraint firstItem="bXz-GM-MJt" firstAttribute="leading" secondItem="GXh-tP-voZ" secondAttribute="leading" id="xsj-Rc-DAL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GXh-tP-voZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detalhe Ponto Turístico" id="eTv-0p-2vH">
+                        <barButtonItem key="backBarButtonItem" title=" " id="d3P-aW-lkZ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapview" destination="bXz-GM-MJt" id="PlV-1u-qq9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3mv-vZ-tkr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2042" y="148"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Z6Q-u0-TWe">
+            <objects>
+                <navigationController id="GfC-ue-Pzh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SMo-pj-FKp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ol8-dd-ef0" kind="relationship" relationship="rootViewController" id="yjN-VO-hz9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6O-at-DWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="178" y="148"/>
         </scene>
     </scenes>
 </document>

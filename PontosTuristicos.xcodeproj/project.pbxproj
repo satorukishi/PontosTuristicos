@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090899302233559800AFC38A /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908992F2233559800AFC38A /* Attraction.swift */; };
+		09089932223358BC00AFC38A /* AttractionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09089931223358BC00AFC38A /* AttractionTableViewController.swift */; };
+		090C3C32230E20C600A99D02 /* AttractionMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090C3C31230E20C600A99D02 /* AttractionMapViewController.swift */; };
+		090C3C342314D06A00A99D02 /* AttractionAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090C3C332314D06A00A99D02 /* AttractionAnnotation.swift */; };
 		09323E3621F7EC420018AD6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09323E3521F7EC420018AD6B /* AppDelegate.swift */; };
-		09323E3821F7EC420018AD6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09323E3721F7EC420018AD6B /* ViewController.swift */; };
 		09323E3B21F7EC420018AD6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09323E3921F7EC420018AD6B /* Main.storyboard */; };
 		09323E3D21F7EC420018AD6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09323E3C21F7EC420018AD6B /* Assets.xcassets */; };
 		09323E4021F7EC420018AD6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09323E3E21F7EC420018AD6B /* LaunchScreen.storyboard */; };
+		09323E4A21F7ED610018AD6B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09323E4921F7ED610018AD6B /* MapKit.framework */; };
+		09323E4D21F7F4A00018AD6B /* attractions.json in Resources */ = {isa = PBXBuildFile; fileRef = 09323E4C21F7F4A00018AD6B /* attractions.json */; };
+		09323E5021FE64720018AD6B /* AttractionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09323E4F21FE64720018AD6B /* AttractionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0908992F2233559800AFC38A /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
+		09089931223358BC00AFC38A /* AttractionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionTableViewController.swift; sourceTree = "<group>"; };
+		090C3C31230E20C600A99D02 /* AttractionMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionMapViewController.swift; sourceTree = "<group>"; };
+		090C3C332314D06A00A99D02 /* AttractionAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionAnnotation.swift; sourceTree = "<group>"; };
 		09323E3221F7EC420018AD6B /* PontosTuristicos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PontosTuristicos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09323E3521F7EC420018AD6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09323E3721F7EC420018AD6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		09323E3A21F7EC420018AD6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09323E3C21F7EC420018AD6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09323E3F21F7EC420018AD6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09323E4121F7EC420018AD6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09323E4921F7ED610018AD6B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		09323E4C21F7F4A00018AD6B /* attractions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = attractions.json; sourceTree = "<group>"; };
+		09323E4F21FE64720018AD6B /* AttractionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09323E4A21F7ED610018AD6B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,7 @@
 			children = (
 				09323E3421F7EC420018AD6B /* PontosTuristicos */,
 				09323E3321F7EC420018AD6B /* Products */,
+				09323E4821F7ED610018AD6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +68,43 @@
 		09323E3421F7EC420018AD6B /* PontosTuristicos */ = {
 			isa = PBXGroup;
 			children = (
+				09323E4E21FE64480018AD6B /* Attraction */,
+				09323E4B21F7F1560018AD6B /* data */,
 				09323E3521F7EC420018AD6B /* AppDelegate.swift */,
-				09323E3721F7EC420018AD6B /* ViewController.swift */,
 				09323E3921F7EC420018AD6B /* Main.storyboard */,
 				09323E3C21F7EC420018AD6B /* Assets.xcassets */,
 				09323E3E21F7EC420018AD6B /* LaunchScreen.storyboard */,
 				09323E4121F7EC420018AD6B /* Info.plist */,
 			);
 			path = PontosTuristicos;
+			sourceTree = "<group>";
+		};
+		09323E4821F7ED610018AD6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09323E4921F7ED610018AD6B /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09323E4B21F7F1560018AD6B /* data */ = {
+			isa = PBXGroup;
+			children = (
+				09323E4C21F7F4A00018AD6B /* attractions.json */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		09323E4E21FE64480018AD6B /* Attraction */ = {
+			isa = PBXGroup;
+			children = (
+				09323E4F21FE64720018AD6B /* AttractionTableViewCell.swift */,
+				0908992F2233559800AFC38A /* Attraction.swift */,
+				09089931223358BC00AFC38A /* AttractionTableViewController.swift */,
+				090C3C31230E20C600A99D02 /* AttractionMapViewController.swift */,
+				090C3C332314D06A00A99D02 /* AttractionAnnotation.swift */,
+			);
+			path = Attraction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,12 +134,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Satoru Kishi";
 				TargetAttributes = {
 					09323E3121F7EC420018AD6B = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -126,6 +175,7 @@
 				09323E4021F7EC420018AD6B /* LaunchScreen.storyboard in Resources */,
 				09323E3D21F7EC420018AD6B /* Assets.xcassets in Resources */,
 				09323E3B21F7EC420018AD6B /* Main.storyboard in Resources */,
+				09323E4D21F7F4A00018AD6B /* attractions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09323E3821F7EC420018AD6B /* ViewController.swift in Sources */,
+				090C3C32230E20C600A99D02 /* AttractionMapViewController.swift in Sources */,
+				090899302233559800AFC38A /* Attraction.swift in Sources */,
+				09323E5021FE64720018AD6B /* AttractionTableViewCell.swift in Sources */,
+				09089932223358BC00AFC38A /* AttractionTableViewController.swift in Sources */,
 				09323E3621F7EC420018AD6B /* AppDelegate.swift in Sources */,
+				090C3C342314D06A00A99D02 /* AttractionAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +231,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -184,6 +239,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -217,6 +273,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -234,6 +291,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -241,6 +299,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -266,6 +325,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -279,8 +339,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.satorukishi.PontosTuristicos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -293,8 +353,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.satorukishi.PontosTuristicos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  PontosTuristicos
 //
-//  Created by Lilian Tatsumy Yamamoto Kishi on 22/01/2019.
+//  Created by Satoru Kishi on 22/01/2019.
 //  Copyright © 2019 Satoru Kishi. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
